@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+    <input type=button value=Старт id="nachalo" onclick = click1()> <br><br>
+		
+    <form>
+        <input type="text" id="input1"> <br><br>
+		<p><input type="radio" id="radio1" value="Правда"> Правда</p>
+		<input type="date" id="data1" value="2020-05-30" min="2018-01-01" max="2020-12-31"> <br><br>
+		<input type=button value=Отправить id="End" onclick = click2()>
+		
+    </form>
+	
+	<script>
+	    input1.hidden = true;
+		radio1.hidden = true;
+		data1.hidden = true;
+		End.hidden = true;
+		function click1() {
+				
+			nachalo.onclick = null;
+			input1.hidden = false;
+			radio1.hidden = false;
+			data1.hidden = false;
+			End.hidden = false;
+			
+			};
+			
+		function click2() {
+				if (document.forms[0].elements[0].value) {alert(document.forms[0].elements[0].value)} else {alert("Первое поле не заполнено")};
+				if (document.forms[0].elements[1].value) {alert(document.forms[0].elements[1].value)} else {alert("Второе поле не заполнено")};
+				if (document.forms[0].elements[2].value) {alert(document.forms[0].elements[2].value)} else {alert("Третье поле не заполнено")};
+			};
+			
+			
+	</script>
+
+</body>
+</html>
