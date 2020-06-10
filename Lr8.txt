@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+<style>
+ img { width: 250px; height: 250px;}
+</style>
+</head>
+<body>
+<script>
+ async function opNASA() { 
+  let urlim = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'); 
+  let data = await urlim.json();
+  let text = document.createElement("p");
+  text.innerHTML = data.copyright;
+  document.body.append(text);
+  let image = document.createElement("img");
+  image.src = data.url;
+  document.body.append(image);
+  let text2 = document.createElement("p");
+  text2.innerHTML = data.explanation;
+  document.body.append(text2);
+                          } 
+ opNASA();	
+</script>
+</body>
+</html>
