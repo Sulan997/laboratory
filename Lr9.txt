@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<body>
+<script>
+ let ul = document.createElement("ul");
+ document.body.append(ul);
+ let cookie = document.cookie.split(";");
+ for (let i = 0; i < cookie.length; i++) 
+  {
+  let spi = document.createElement("spi");
+  spi.textContent = cookie[i];
+  ul.append(spi);
+  }
+</script>
+</body>
+</html>
