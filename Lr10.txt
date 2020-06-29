@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <style>
+   img {float: right;}
+  </style>
+</head>
+	<body>
+	<img src="https://otvet.imgsmail.ru/download/dc09e7bb49a5b5004d8468115488f70a_i-49.gif" alt="Иллюстрация">
+			<h3>ВЫРАЖЕНИЯ:</h3>
+			<p>1. [Аа]р(ахи)?(х|м|с|й)?</p>
+			<p>2. (М|Н)аш(а|о|у|и)на</p>
+			<p>3. .де(щ|я|е)?ло</p>
+			<p>4. (ур|ом)+(ро|ук)+|(уро)(ж|р|й|м)?ай</p>
+			<p>5. ^(В)(л|д|м)(о){1,5}(х|н|л)</p>
+			<p>6. (Б|е)+(ил|т)+|(бил)([а-яА-Я]т) </p>
+			<p>7. (Т|Ж)а(м)+(ке+го?|ад?)а</p>
+			<p>8. (Ис|(И|и)р|(И|и){0,1}(А|а|В|в|Д|д|С|с){1,}(C|c)?)[а-я]{0,2}</p>
+			<p>9. (К|Н|М).(л|н)+(о|ук)+|(у)</p>
+			<p>10. ^А(.)??рд|А[а-я]+(.)+д</p>
+		<form>
+			<h1>ВОПРОСЫ:</h1>
+			<p>1. Земляной орех</p>
+			<p>2. Средство передвижения</p>
+			<p>3. То, чем укрываемся</p>
+			<p>4. Что собираем осенью?</p>
+			<p>5. Делаем ..., потом выдох</p>
+			<p>6. Необходимо, когда собираешься ехать на поезде</p>
+			<p>7. Ведущий на свадьбе</p>
+			<p>8. Синий цветок</p>
+			<p>9. Чем мы моем руки</p>
+			<p>10. Ставим на гитаре</p>
+			<h3>ВВЕДИТЕ ОТВЕТЫ:</h3>
+			1	<input type="text"> 	
+                        2	<input type="text">	
+                        3	<input type="text">	
+                        4	<input type="text">	
+                        5	<input type="text">
+			<br><br>
+			6	<input type="text">		
+                        7	<input type="text">		
+                        8	<input type="text">	
+                        9	<input type="text">		
+                       10	<input type="text">
+			<br><br>
+		</form>
+		<input type="button" value="Проверить" onclick=buttonclick()>
+	
+		<script>
+			let rightanswers =
+			[
+			"Арахис",
+			"Машина",
+			"Одеяло",
+			"Урожай",
+			"Вдох",
+			"Билет",
+			"Тамада",
+			"Ирис",
+			"Мыло",
+			"Аккорд",
+			];
+			
+			
+			function buttonclick() {
+				for (let i = 0; i < document.forms[0].length; i++  ) {
+				if ( JSON.stringify( document.forms[0].elements[i].value ) === JSON.stringify( rightanswers[i]) )
+				{ document.forms[0].elements[i].value = 'Правильно' }
+	
+				else
+				{ document.forms[0].elements[i].value = 'Не правильно' }
+			}
+			};
+			
+		</script>
+		
+	</body>
+
+</html>
